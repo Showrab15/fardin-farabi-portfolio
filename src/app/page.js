@@ -1,9 +1,11 @@
-import Image from "next/image";
+import Banner from "./components/Banner";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
     <>
-    Hello from fardin farabi
+    <Banner/>
+    <Projects/>
     </>
   );
 }
