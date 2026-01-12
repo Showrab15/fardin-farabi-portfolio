@@ -108,7 +108,7 @@ export default function Projects() {
   });
 
   return (
-    <section ref={containerRef} className="relative h-[300vh] w-full">
+    <section id="work" ref={containerRef} className="relative h-[300vh] w-full">
       <div className="sticky top-0 h-screen overflow-hidden flex items-center">
         {projects.map((project, i) => (
           <ProjectItem

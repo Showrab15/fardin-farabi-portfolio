@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Banner() {
   return (
-    <div  className=" my-auto text-white flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div id="intro"  className="h-screen my-auto text-white flex items-center justify-center px-4 sm:px-6 lg:px-8">
       {/* Background gradient overlay */}
       
       {/* Content container */}
