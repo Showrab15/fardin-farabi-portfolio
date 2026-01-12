@@ -1,3 +1,5 @@
+// page.js
+
 import Banner from "./components/Banner";
 import Projects from "./components/Projects";
 

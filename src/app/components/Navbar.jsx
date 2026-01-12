@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import {Minus} from "lucide-react"
-export default function Sidebar() {
+export default function Navbar() {
   const [activeSection, setActiveSection] = useState('Intro');
 
   const menuItems = [
