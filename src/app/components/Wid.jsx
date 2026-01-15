@@ -50,15 +50,15 @@ export default function Wid() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className=" text-white mt-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header with border */}
-          <h1 className="text-center text-4xl sm:text-5xl  font-medium text-white">
+          <h1 className="text-left text-4xl sm:text-5xl  font-medium text-white">
             What I do
           </h1>
 
         {/* Skills Grid */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-4 lg:gap-10">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-4 lg:gap-10">
           {skills.map((skill, index) => (
             <div 
               key={index}
@@ -67,9 +67,15 @@ export default function Wid() {
               {/* Card Content */}
               <div className="flex items-start gap-6 sm:gap-4">
                 {/* Icon Circle */}
-              <div className="relative flex-shrink-0 w-10 h-10 sm:w-18 sm:h-18 rounded-full">
-  {/* Rotating gradient background */}
-  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#DDFF00] via-[#DDFF00]/40 to-[#DDFF00]/60 animate-spin" style={{ animationDuration: '3s' }}></div>
+            <div className=" relative flex-shrink-0 w-10 h-10 sm:w-18 sm:h-18 rounded-full">
+  {/* Rotating gradient border with half visibility */}
+  <div 
+    className="absolute inset-0 rounded-full animate-spin" 
+    style={{ 
+      animationDuration: '3s',
+      background: 'conic-gradient(from 120deg, #DDFF00 60deg, #DDFF00 90deg, transparent 180deg, transparent 160deg)'
+    }}
+  ></div>
   
   {/* Inner content with slight padding to show border */}
   <div className="absolute inset-[2px] rounded-full bg-black flex items-center justify-center">
@@ -78,6 +84,7 @@ export default function Wid() {
     </div>
   </div>
 </div>
+
 
                 {/* Text Content */}
                 <div className="flex-1 pt-2">

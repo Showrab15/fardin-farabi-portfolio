@@ -50,6 +50,7 @@ function ProjectItem({ project, index, scrollYProgress, total }) {
 
   return (
     <motion.div
+      id="work"
       style={{ y }}
       className="absolute inset-0 flex flex-col justify-center items-center"
     >
@@ -108,8 +109,8 @@ export default function Projects() {
   });
 
   return (
-    <section id="work" ref={containerRef} className="relative h-[300vh] w-full">
-      <div className="sticky top-0 h-screen overflow-hidden flex items-center">
+    <section id="work" ref={containerRef} className="relative h-[150vh] w-full">
+      <div className="sticky top-0 h-screen overflow-hidden flex  items-start">
         {projects.map((project, i) => (
           <ProjectItem
             key={project.id}
