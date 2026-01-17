@@ -88,7 +88,7 @@
 
 // export default function References() {
 //   const [activeIndex, setActiveIndex] = useState(0);
-  
+
 //   const testimonials = [
 //     {
 //       text: "Alex has an exceptional ability to collaborate across teams, ensuring the final product is not only visually beautiful but technically sound. Their designs always align with development constraints, making the entire process efficient and smooth.",
@@ -127,11 +127,11 @@
 //           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#DDFF00]/10 border border-[#DDFF00]/30 rounded-full backdrop-blur-sm mb-6">
 //             <span className="text-[#DDFF00] text-sm font-medium">💬 Client Testimonials</span>
 //           </div>
-          
+
 //           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-white to-[#DDFF00] bg-clip-text text-transparent">
 //             What People Say
 //           </h1>
-          
+
 //           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
 //             Don't just take my word for it — hear from some of the amazing people I've worked with
 //           </p>
@@ -146,7 +146,7 @@
 //             >
 //               {/* Decorative corner */}
 //               <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#DDFF00]/20 to-transparent rounded-bl-3xl rounded-tr-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
+
 //               {/* Quote Icon */}
 //               <div className="mb-6">
 //                 <svg 
@@ -306,29 +306,29 @@ import React, { useState } from 'react';
 
 export default function References() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  
+
   const testimonials = [
     {
-      text: "Alex has an exceptional ability to collaborate across teams, ensuring the final product is not only visually beautiful but technically sound. Their designs always align with development constraints, making the entire process efficient and smooth.",
-      author: "Rachel Kim",
-      role: "Senior Developer",
-      company: "ThinkCraft Studio",
+text: "Fardin contributed significantly to our UI/UX projects at BitByte Innovations. He showed strong creativity, attention to detail, and a solid understanding of modern design principles while collaborating effectively with our development team to deliver user-friendly and visually appealing solutions.",
+      author: "Mohammad Ashraf Ali",
+      role: "CEO",
+      company: "Bibtbyte Innovations",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
       color: "from-cyan-500 to-blue-500"
     },
     {
-      text: "Alex brings a fresh perspective to every project. Their innovative ideas and dedication to detail transformed the way we approached our design challenges, resulting in visually striking products that exceeded client expectations.",
-      author: "Jonathan Lee",
-      role: "Creative Director",
-      company: "Waveform Agency",
+text: "During his time as a Web Developer Intern at ASCII System, Fardin demonstrated strong design thinking and a clear understanding of how design and development work together. His ideas and collaborative mindset added real value to the team.",
+      author: "Shakib Hossain",
+      role: "CTO",
+      company: "ASCII System",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
       color: "from-purple-500 to-pink-500"
     },
     {
-      text: "Alex has a remarkable understanding of user psychology, translating complex requirements into experience that feels both modern and timeless. The attention to detail and commitment to excellence is unmatched.",
-      author: "Sarah Mitchell",
-      role: "Product Manager",
-      company: "CoreTech Solutions",
+text: "I’m really happy to have worked with Fardin. He helped translate Figma designs into clean, responsive UI elements and made the development process smoother through clear communication and a friendly teamwork mindset.",
+      author: "Showrab Paul",
+      role: "Mern Stack Developer",
+      // company: "CoreTech Solutions",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
       color: "from-orange-500 to-red-500"
     }
@@ -351,14 +351,14 @@ export default function References() {
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#DDFF00]" />
             <span className="text-[#DDFF00] text-sm font-medium tracking-wider uppercase">Testimonials</span>
           </div>
-          
-         
+
+
         </div>
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
           {/* Large Featured Testimonial - Left */}
-          <div 
+          <div
             className="lg:col-span-7 relative group cursor-pointer"
             onMouseEnter={() => setHoveredIndex(0)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -366,7 +366,7 @@ export default function References() {
             <div className="relative h-full bg-black border border-white/10 rounded-3xl p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:border-[#DDFF00]/50">
               {/* Gradient Orb */}
               <div className={`absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br ${testimonials[0].color} opacity-20 blur-3xl rounded-full transition-all duration-700 ${hoveredIndex === 0 ? 'scale-150' : 'scale-100'}`} />
-              
+
               <div className="relative z-10">
                 {/* Quote Mark */}
                 <div className="w-16 h-16 mb-8 bg-[#DDFF00]/10 rounded-2xl flex items-center justify-center">
@@ -395,7 +395,7 @@ export default function References() {
           {/* Two Stacked Testimonials - Right */}
           <div className="lg:col-span-5 space-y-6">
             {testimonials.slice(1).map((testimonial, index) => (
-              <div 
+              <div
                 key={index + 1}
                 className="relative group cursor-pointer"
                 onMouseEnter={() => setHoveredIndex(index + 1)}
@@ -404,7 +404,7 @@ export default function References() {
                 <div className="relative bg-black border border-white/10 rounded-3xl p-6 lg:p-8 overflow-hidden transition-all duration-500 hover:border-[#DDFF00]/50">
                   {/* Gradient Orb */}
                   <div className={`absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br ${testimonial.color} opacity-20 blur-3xl rounded-full transition-all duration-700 ${hoveredIndex === index + 1 ? 'scale-150' : 'scale-100'}`} />
-                  
+
                   <div className="relative z-10">
                     <div className="flex items-start gap-3 mb-4">
                       <div className={`relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-transparent group-hover:ring-[#DDFF00]/30 transition-all duration-300`}>
@@ -435,7 +435,7 @@ export default function References() {
             { metric: "40+", label: "Clients", icon: "🤝" },
             { metric: "5.0", label: "Avg Rating", icon: "⭐" }
           ].map((item, index) => (
-            <div 
+            <div
               key={index}
               className="group relative bg-black border border-white/10 rounded-2xl p-6 hover:border-[#DDFF00]/50 transition-all duration-300 overflow-hidden"
             >
@@ -452,7 +452,7 @@ export default function References() {
         {/* CTA Section with Split Design */}
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-[#DDFF00]/5 via-transparent to-purple-500/5 rounded-3xl blur-2xl" />
-          
+
           <div className="relative bg-black border border-white/10 rounded-3xl overflow-hidden">
             <div className="grid md:grid-cols-2">
               {/* Left Side - Content */}
@@ -481,15 +481,15 @@ export default function References() {
                 <div className="relative">
                   {/* Floating Elements */}
                   <div className="absolute -top-8 -left-8 w-24 h-24 bg-[#DDFF00]/20 rounded-full blur-2xl animate-pulse" />
-                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse" style={{animationDelay: '1s'}} />
-                  
+                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
+
                   {/* Icon Grid */}
                   <div className="relative grid grid-cols-3 gap-4">
                     {['💼', '🎨', '⚡', '🎯', '✨', '🚀', '💡', '🔥', '⭐'].map((emoji, i) => (
-                      <div 
+                      <div
                         key={i}
                         className="w-16 h-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-300"
-                        style={{animationDelay: `${i * 0.1}s`}}
+                        style={{ animationDelay: `${i * 0.1}s` }}
                       >
                         {emoji}
                       </div>
