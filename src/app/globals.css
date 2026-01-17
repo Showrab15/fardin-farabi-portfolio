@@ -12,13 +12,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #333030;
     color: white;
   }
 }
 
 body {
-  background: #121211;
+  background: #30302c;
   color: white;
 }
 
