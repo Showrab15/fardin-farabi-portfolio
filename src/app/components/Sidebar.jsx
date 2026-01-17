@@ -98,11 +98,8 @@ const menu = [
 ];
 
 const socialLinks = [
-  { name: "Twitter", icon: Twitter, href: "https://twitter.com/yourhandle", color: "hover:text-blue-400" },
-  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/in/yourprofile", color: "hover:text-blue-600" },
-  { name: "GitHub", icon: Github, href: "https://github.com/yourusername", color: "hover:text-gray-300" },
-  { name: "Dribbble", icon: Dribbble, href: "https://dribbble.com/yourprofile", color: "hover:text-pink-400" },
-  { name: "Instagram", icon: Instagram, href: "https://instagram.com/yourhandle", color: "hover:text-purple-400" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/fardin-farabi-84b1462a5?", color: "hover:text-blue-600" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/ui.fardin?igsh=azJwenRwMDdneGc0&utm_source=ig_contact_invite", color: "hover:text-purple-400" },
 ];
 
 export default function Sidebar() {
@@ -194,7 +191,7 @@ export default function Sidebar() {
               <span className="text-white">Fardin </span>
               <span className="text-[#DDFF00]">Farabi</span>
             </h1>
-            <p className="text-xs text-gray-500 mt-1">UI/UX Designer</p>
+            <p className="text-xs text-gray-500 mt-1">UI/UX & Product Designer</p>
           </div>
         </div>
 

@@ -152,9 +152,7 @@ export default function Footer() {
   ];
 
   const socialMedia = [
-    {
-      name: 'Behance', icon: <FaBehance />
-, href: 'https://www.behance.net/fardinfarabi1',},
+   
     { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/fardin-farabi-84b1462a5?', color: 'hover:text-blue-600' },
 
     { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/ui.fardin?igsh=azJwenRwMDdneGc0&utm_source=ig_contact_invite', color: 'hover:text-purple-400' }

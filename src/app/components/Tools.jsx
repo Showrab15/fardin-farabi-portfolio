@@ -43,12 +43,12 @@ export default function ToolsIUse() {
     description:
       "Creating icons, vector assets, illustrations, and scalable UI elements."
   },
-  {
-    icon: <Monitor size={22} strokeWidth={1.5} />,
-    title: "Webflow",
-    description:
-      "Translating designs into responsive, production-ready websites without code."
-  },
+  // {
+  //   icon: <Monitor size={22} strokeWidth={1.5} />,
+  //   title: "Webflow",
+  //   description:
+  //     "Translating designs into responsive, production-ready websites without code."
+  // },
   // {
   //   icon: <Smartphone size={22} strokeWidth={1.5} />,
   //   title: "Framer",

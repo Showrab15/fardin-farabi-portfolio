@@ -322,11 +322,11 @@ export default function References() {
       author: "Sourav Paul",
       role: "CEO",
       company: "ASCII System",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
+      image: "/sourav.jpg",
       color: "from-purple-500 to-pink-500"
     },
     {
-      text: "I’m really happy to have worked with Fardin. He helped translate Figma designs into clean, responsive UI elements and made the development process smoother through clear communication and a friendly teamwork mindset.",
+      text: "I'm really happy to have worked with Fardin. He helped translate Figma designs into clean, responsive UI elements and made the development process smoother through clear communication and a friendly teamwork mindset.",
       author: "Showrab Paul",
       role: "Mern Stack Developer",
       // company: "CoreTech Solutions",
@@ -455,7 +455,7 @@ export default function References() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           {[
             { metric: "50+", label: "Projects", icon: "🚀" },
             { metric: "98%", label: "Success Rate", icon: "✨" },
@@ -474,7 +474,7 @@ export default function References() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* CTA Section with Split Design */}
         <div className="relative">
