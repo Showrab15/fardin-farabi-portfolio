@@ -303,13 +303,14 @@
 
 "use client"
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function References() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const testimonials = [
     {
-text: "Fardin contributed significantly to our UI/UX projects at BitByte Innovations. He showed strong creativity, attention to detail, and a solid understanding of modern design principles while collaborating effectively with our development team to deliver user-friendly and visually appealing solutions.",
+      text: "Fardin contributed significantly to our UI/UX projects at BitByte Innovations. He showed strong creativity, attention to detail, and a solid understanding of modern design principles while collaborating effectively with our development team to deliver user-friendly and visually appealing solutions.",
       author: "Mohammad Ashraf Ali",
       role: "CEO",
       company: "Bibtbyte Innovations",
@@ -317,7 +318,7 @@ text: "Fardin contributed significantly to our UI/UX projects at BitByte Innovat
       color: "from-cyan-500 to-blue-500"
     },
     {
-text: "During his time as a Web Developer Intern at ASCII System, Fardin demonstrated strong design thinking and a clear understanding of how design and development work together. His ideas and collaborative mindset added real value to the team.",
+      text: "During his time as a Web Developer Intern at ASCII System, Fardin demonstrated strong design thinking and a clear understanding of how design and development work together. His ideas and collaborative mindset added real value to the team.",
       author: "Shakib Hossain",
       role: "CTO",
       company: "ASCII System",
@@ -325,7 +326,7 @@ text: "During his time as a Web Developer Intern at ASCII System, Fardin demonst
       color: "from-purple-500 to-pink-500"
     },
     {
-text: "I’m really happy to have worked with Fardin. He helped translate Figma designs into clean, responsive UI elements and made the development process smoother through clear communication and a friendly teamwork mindset.",
+      text: "I’m really happy to have worked with Fardin. He helped translate Figma designs into clean, responsive UI elements and made the development process smoother through clear communication and a friendly teamwork mindset.",
       author: "Showrab Paul",
       role: "Mern Stack Developer",
       // company: "CoreTech Solutions",
@@ -333,9 +334,35 @@ text: "I’m really happy to have worked with Fardin. He helped translate Figma 
       color: "from-orange-500 to-red-500"
     }
   ];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.12,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1], // smooth, natural easing
+      },
+    },
+  };
 
   return (
-    <div className=" pt-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
+    <motion.div id="references" initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
+      className="pt-20 px-4 sm:px-6 lg:px-12 xl:px-16">
       {/* Dynamic Background Grid */}
       <div className="absolute inset-0 -z-10 opacity-20">
         <div className="absolute inset-0" style={{
@@ -501,6 +528,6 @@ text: "I’m really happy to have worked with Fardin. He helped translate Figma 
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

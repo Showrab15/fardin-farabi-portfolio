@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
     <Banner/>
-    {/* <Projects/> */}
+    <Projects/>
     <Experience/>
     <Wid/>
     <ToolsIUse/>

@@ -220,7 +220,7 @@ const [viewportAmount, setViewportAmount] = useState(0.3); // default
          }}
          viewport={{ once: true, amount: viewportAmount }}
          id='experience'
-         className="relative py-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
+         className="relative pt-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
       
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">

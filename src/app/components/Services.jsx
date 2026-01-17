@@ -151,6 +151,7 @@
 "use client"
 import React, { useState } from 'react';
 import { Sparkles, Zap, Smartphone, ArrowRight, Mail, User, MessageSquare, Send } from 'lucide-react';
+import { motion } from "framer-motion";
 
 export default function AboutServices() {
   const [formData, setFormData] = useState({
@@ -213,8 +214,36 @@ export default function AboutServices() {
     });
   };
 
+  const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1], // smooth, natural easing
+    },
+  },
+};
+
+
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
+    <motion.div id="services" initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={containerVariants}
+          className="pt-20 px-4 sm:px-6 lg:px-12 xl:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-6 text-center lg:text-left">
@@ -407,6 +436,6 @@ export default function AboutServices() {
 
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

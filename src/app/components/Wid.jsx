@@ -87,7 +87,7 @@ const itemVariants = {
 };
 
   return (
-    <motion.div  initial="hidden"
+    <motion.div id="skills" initial="hidden"
   whileInView="visible"
   viewport={{ once: true, amount: 0.2 }}
   variants={containerVariants}
