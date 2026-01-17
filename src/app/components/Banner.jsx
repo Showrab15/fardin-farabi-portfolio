@@ -118,7 +118,7 @@ export default function Banner() {
   return (
     <section
       id="intro"
-      className="relative pt-8 pb-16 px-4 sm:px-6 lg:px-12 xl:px-16 text-white overflow-hidden"
+      className="relative pt-8 px-4 sm:px-6 lg:px-12 xl:px-16 text-white overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-20">

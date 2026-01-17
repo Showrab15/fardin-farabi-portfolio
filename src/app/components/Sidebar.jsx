@@ -20,7 +20,7 @@ export default function Sidebar({ activeSection }) {
       {/* Mobile menu button */}
       <button
         onClick={() => setOpen(true)}
-        className="fixed top-5 left-5 z-50 rounded-md border border-white/10 bg-black p-2 text-white lg:hidden"
+        className="hidden fixed top-5 left-5 z-50 rounded-md border border-white/10 bg-black p-2 text-white lg:hidden"
       >
         <Menu size={20} />
       </button>

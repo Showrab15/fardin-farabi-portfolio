@@ -1,89 +1,114 @@
 import React from 'react';
-import { Pencil, Wrench, Search } from 'lucide-react';
+import {
+  Pencil,
+  LayoutDashboard,
+  Smartphone,
+  ShoppingCart,
+  Layers,
+  Figma,
+  Globe,
+  Boxes
+} from "lucide-react";
 
 export default function Wid() {
   const skills = [
     {
-      icon: <Pencil size={22} strokeWidth={1.5} />,
+      icon: <Figma size={22} strokeWidth={1.5} />,
+      title: "UI/UX & Product Design",
+      description:
+        "Designing user-centered digital products with a strong focus on usability, clarity, and business goals."
+    },
+    {
+      icon: <Globe size={22} strokeWidth={1.5} />,
       title: "Website Design",
-      description: "Crafting responsive, modern, and visually appealing websites that reflect your brand identity."
+      description:
+        "Crafting responsive, modern, and visually appealing websites that align with brand identity."
     },
     {
-      icon: <Wrench size={22} strokeWidth={1.5} />,
-      title: "Apps Design",
-      description: "Designing intuitive and engaging mobile applications for Android and iOS with smooth UX/UI."
+      icon: <Boxes size={22} strokeWidth={1.5} />,
+      title: "SaaS Product Design",
+      description:
+        "Designing scalable SaaS products with intuitive flows, clean interfaces, and data-driven UX."
     },
     {
-      icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-        <path d="M12 2L2 7L12 12L22 7L12 2Z" />
-        <path d="M2 17L12 22L22 17" />
-        <path d="M2 12L12 17L22 12" />
-      </svg>,
-      title: "Dashboard Design",
-      description: "Creating interactive and user-friendly dashboards for analytics and reporting purposes."
+      icon: <LayoutDashboard size={22} strokeWidth={1.5} />,
+      title: "Dashboard & Admin Design",
+      description:
+        "Creating user-friendly dashboards and admin panels for analytics, management, and reporting."
     },
     {
-      icon: <Search size={22} strokeWidth={1.5} />,
-      title: "Landing Page Design",
-      description: "Building high-converting landing pages optimized for user engagement and lead generation."
+      icon: <Smartphone size={22} strokeWidth={1.5} />,
+      title: "Mobile App Design",
+      description:
+        "Designing intuitive and engaging mobile applications for Android and iOS platforms."
     },
     {
-      icon: <Search size={22} strokeWidth={1.5} />,
-      title: "Landing Page Design",
-      description: "Building high-converting landing pages optimized for user engagement and lead generation."
+      icon: <ShoppingCart size={22} strokeWidth={1.5} />,
+      title: "E-commerce Experience Design",
+      description:
+        "Designing conversion-focused e-commerce experiences with seamless user journeys."
     },
     {
-      icon: <Search size={22} strokeWidth={1.5} />,
-      title: "E-commerce Design",
-      description: "Designing online stores with seamless shopping experiences to boost sales and retention."
+      icon: <Layers size={22} strokeWidth={1.5} />,
+      title: "Wireframing & Prototyping",
+      description:
+        "Creating wireframes and interactive prototypes to validate ideas before development."
     },
     {
-      icon: <Search size={22} strokeWidth={1.5} />,
-      title: "E-commerce Design",
-      description: "Designing online stores with seamless shopping experiences to boost sales and retention."
-    },
-    {
-      icon: <Search size={22} strokeWidth={1.5} />,
-      title: "Wireframe & Prototype",
-      description: "Developing wireframes and interactive prototypes to visualize and test your product ideas."
-    },
+      icon: <Pencil size={22} strokeWidth={1.5} />,
+      title: "Design Systems & UX Strategy",
+      description:
+        "Building consistent design systems and UX strategies to scale products efficiently."
+    }
   ];
 
   return (
-    <div className=" text-white mt-20 px-4 sm:px-6 lg:px-8">
+    <div className=" pt-20 px-4 sm:px-6 lg:px-12 xl:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Header with border */}
-          <h1 className="text-left text-4xl sm:text-5xl  font-medium text-white">
-            What I do
-          </h1>
+        <h1 className="text-left text-4xl sm:text-5xl  font-medium text-white">
+          What I do
+        </h1>
 
         {/* Skills Grid */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-4 lg:gap-10">
           {skills.map((skill, index) => (
-            <div 
+            <div
               key={index}
               className="group relative"
             >
               {/* Card Content */}
               <div className="flex items-start gap-6 sm:gap-4">
                 {/* Icon Circle */}
-            <div className=" relative flex-shrink-0 w-10 h-10 sm:w-18 sm:h-18 rounded-full">
-  {/* Rotating gradient border with half visibility */}
-  <div 
-    className="absolute inset-0 rounded-full animate-spin" 
-    style={{ 
-      animationDuration: '3s',
-      background: 'conic-gradient(from 120deg, #DDFF00 60deg, #DDFF00 90deg, transparent 180deg, transparent 160deg)'
-    }}
-  ></div>
-  
-  {/* Inner content with slight padding to show border */}
-  <div className="absolute inset-[2px] rounded-full bg-black flex items-center justify-center">
-    <div className="text-white transition-colors duration-300">
-      {skill.icon}
-    </div>
-  </div>
-</div>
+                <div className="relative flex-shrink-0 w-10 h-10 sm:w-18 sm:h-18 rounded-full">
+                  {/* Smooth fading rotating ring */}
+                  <div
+                    className="absolute inset-0 rounded-full animate-spin"
+                    style={{
+                      animationDuration: "4s",
+                      background: `
+        conic-gradient(
+          rgba(221,255,0,0.2),
+          rgba(221,255,0,0.4),
+          rgba(221,255,0,0.4),
+          rgba(221,255,0,0.1),
+          rgba(221,255,0,0.5),
+          rgba(221,255,0,0.4),
+          rgba(221,255,0,0.3),
+          rgba(221,255,0,0.1)
+        )
+      `,
+                    }}
+                  />
+
+                  {/* Inner circle */}
+                  <div className="absolute inset-[2px] rounded-full bg-black flex items-center justify-center">
+                    <div className="text-white group-hover:text-[#DDFF00] transition-colors duration-300">
+                      {skill.icon}
+                    </div>
+                  </div>
+                </div>
+
 
 
                 {/* Text Content */}

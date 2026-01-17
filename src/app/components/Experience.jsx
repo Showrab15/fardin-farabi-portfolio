@@ -8,35 +8,47 @@ export default function Experience() {
   const experiences = [
     {
       id: 1,
-      company: "Madina Furniture",
-      logo: (
-        <svg viewBox="0 0 40 40" className="w-12 h-12" fill="none">
-          <rect x="8" y="8" width="24" height="24" rx="4" stroke="white" strokeWidth="2" />
-          <rect x="14" y="14" width="12" height="12" rx="2" stroke="white" strokeWidth="2" />
-        </svg>
-      ),
-      position: "Accounts & Operations Executive",
-      description: "At PixelCraft Studio, I led the UI/UX design for a range of digital products, from mobile apps to web platforms. My role involved closely collaborating with cross-functional teams to deliver user-centered designs that enhanced both functionality and aesthetic appeal."
+      company: "BitByte Innovations",
+      logo: "https://bitbyteinnovations.com/logo/optimized/horizontal-logo-black-large.png",
+      role: "UI/UX & Product Designer",
+      date: "Oct 2025 – Dec 2025",
+      location:
+        "1103, CDA Avenue (Beside Sanmar Ocean City), East Nasirabad, Chittagong, Bangladesh",
+      points: [
+        "Designed and maintained responsive websites focusing on usability, visual consistency, and modern UI standards.",
+        "Worked on digital product design including user interfaces, layouts, and scalable design systems aligned with business goals.",
+        "Collaborated closely with developers to translate designs into functional and user-friendly interfaces."
+      ],
     },
     {
       id: 2,
-      company: "ASCII System",
-      logo: <Infinity className="w-12 h-12" strokeWidth={1.5} />,
-      position: "Web Developer Intern",
-      description: "As a Senior Product Designer at CreativeMinds, I worked on a wide variety of branding and web design projects for clients across industries, from tech startups to established businesses."
+      company: "Madina Furniture",
+      logo: "https://bitbyteinnovations.com/logo/optimized/horizontal-logo-black-large.png",
+      role: "Accounts & Operations Executive",
+      date: "Feb 2025 – Sep 2025",
+      location:
+        "S.S Khaled Road, West Side of Ashkar Dighi, Chattogram, Bangladesh",
+      points: [
+        "Handled daily accounts, sales records, and expense tracking for smooth shop operations.",
+        "Coordinated with management to support operational decision-making.",
+        "Managed social media platforms by designing and posting promotional content to increase customer engagement."
+      ],
     },
     {
       id: 3,
-      company: "BitByte Innovations",
-      logo: (
-        <svg viewBox="0 0 40 40" className="w-12 h-12" fill="none">
-          <path d="M10 30V10L30 30V10" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      ),
-      position: "Website Design & Product Design",
-      description: "At DesignSphere Solutions, I focused on branding, print design, and visual identity creation. My work contributed to building cohesive, memorable brand experiences for clients across various industries."
-    }
+      company: "ASCII System",
+      logo: "https://bitbyteinnovations.com/logo/optimized/horizontal-logo-black-large.png",
+      role: "Web Developer Intern",
+      date: "Aug 2023 – Nov 2023",
+      location:
+        "House-100 (5th Floor), 8 Hill View Road, Chattogram 4203, Bangladesh",
+      points: [
+        "Worked with the development team to build and maintain websites.",
+        "Managed website design and assisted in application development."
+      ],
+    },
   ];
+
   const [viewportAmount, setViewportAmount] = useState(0.3); // default
 
   useEffect(() => {
@@ -57,7 +69,7 @@ export default function Experience() {
 
 
   return (
-    <div id='experience' className="mt-5  px-4 sm:px-6 lg:px-8">
+    <div id='experience' className="pt-20 px-4 sm:px-6 lg:px-12 xl:px-16">
       <motion.div initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -68,7 +80,7 @@ export default function Experience() {
         viewport={{ once: true, amount: viewportAmount }} >
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-left mb-16">
+          <div className="text-left mb-8">
             <h2 className="text-4xl sm:text-5xl  font-medium text-white mb-4">
               Work experience
             </h2>
@@ -79,28 +91,36 @@ export default function Experience() {
             {experiences.map((exp) => (
               <div
                 key={exp.id}
-                className=" rounded-2xl p-8 border border-[#1A1A1A] hover:border-[#2A2A2A] transition-all duration-300 flex flex-col"
+                className="rounded-2xl p-8 border border-[#1A1A1A] hover:border-[#2A2A2A] transition-all duration-300"
               >
                 {/* Logo */}
-                <div className="mb-6 text-white">
-                  {exp.logo}
+                <div className="mb-5">
+                  <img className="w-32 h-10 object-contain" src={exp.logo} alt={exp.company} />
                 </div>
 
-                {/* Company Name */}
-                <h3 className="text-2xl font-medium text-white mb-2">
+                {/* Company */}
+                <h3 className="text-2xl font-medium text-white mb-1">
                   {exp.company}
                 </h3>
 
-                {/* Position */}
-                <p className="text-sm text-gray-400 mb-4">
-                  {exp.position}
+                {/* Role + Date */}
+                <p className="text-sm text-gray-400 mb-2">
+                  {exp.role}
                 </p>
 
-                {/* Description */}
-                <p className="text-gray-300 leading-relaxed text-sm flex-grow">
-                  {exp.description}
+                {/* Location */}
+                <p className="text-xs text-gray-500 mb-5 max-w-2xl">
+                  {exp.date}
                 </p>
+
+                {/* Bullet points */}
+                <ul className="space-y-2 text-sm text-gray-300 list-disc list-inside">
+                  {exp.points.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
               </div>
+
             ))}
           </div>
         </div>
