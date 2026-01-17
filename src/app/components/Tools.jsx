@@ -1,42 +1,63 @@
 import React from 'react';
-import { Figma, PenTool, Layers, Monitor, Grid, Smartphone } from 'lucide-react';
+import {
+  Figma,
+  PenTool,
+  Layers,
+  Monitor,
+  Smartphone,
+  LayoutGrid,
+  Users
+} from "lucide-react";
 
 export default function ToolsIUse() {
-  const tools = [
-    {
-      icon: <Figma size={22} strokeWidth={1.5} />,
-      title: "Figma",
-      description: "Primary design tool for UI design, prototyping, collaboration, and design systems."
-    },
-    {
-      icon: <PenTool size={22} strokeWidth={1.5} />,
-      title: "Adobe XD",
-      description: "Used for wireframing, UI layouts, and interactive prototypes for web and mobile apps."
-    },
-    {
-      icon: <Layers size={22} strokeWidth={1.5} />,
-      title: "Adobe Illustrator",
-      description: "Creating icons, vector assets, illustrations, and scalable UI elements."
-    },
-    {
-      icon: <Monitor size={22} strokeWidth={1.5} />,
-      title: "Webflow",
-      description: "Translating designs into responsive, production-ready websites without code."
-    },
-    {
-      icon: <Grid size={22} strokeWidth={1.5} />,
-      title: "Notion",
-      description: "Organizing UX research, design documentation, and project workflows."
-    },
-    {
-      icon: <Smartphone size={22} strokeWidth={1.5} />,
-      title: "Framer",
-      description: "Building high-fidelity prototypes with smooth animations and real interactions."
-    },
-  ];
+ const tools = [
+  {
+    icon: <Figma size={22} strokeWidth={1.5} />,
+    title: "Figma",
+    description:
+      "Primary design tool for UI design, prototyping, collaboration, and scalable design systems."
+  },
+  {
+    icon: <LayoutGrid size={22} strokeWidth={1.5} />,
+    title: "FigJam",
+    description:
+      "Collaborative whiteboard for brainstorming, user flows, wireframes, and UX workshops."
+  },
+  {
+    icon: <Users size={22} strokeWidth={1.5} />,
+    title: "Miro",
+    description:
+      "Facilitating UX research, journey mapping, ideation sessions, and team collaboration."
+  },
+  {
+    icon: <PenTool size={22} strokeWidth={1.5} />,
+    title: "Adobe XD",
+    description:
+      "Used for wireframing, UI layouts, and interactive prototypes for web and mobile apps."
+  },
+  {
+    icon: <Layers size={22} strokeWidth={1.5} />,
+    title: "Adobe Illustrator",
+    description:
+      "Creating icons, vector assets, illustrations, and scalable UI elements."
+  },
+  {
+    icon: <Monitor size={22} strokeWidth={1.5} />,
+    title: "Webflow",
+    description:
+      "Translating designs into responsive, production-ready websites without code."
+  },
+  // {
+  //   icon: <Smartphone size={22} strokeWidth={1.5} />,
+  //   title: "Framer",
+  //   description:
+  //     "Building high-fidelity prototypes with smooth animations and real interactions."
+  // }
+];
+
 
   return (
-    <div className=" text-white mt-20 px-4 sm:px-6 lg:px-8">
+    <div className=" pt-20 px-4 sm:px-6 lg:px-12 xl:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <h1 className="text-left text-4xl sm:text-5xl font-medium text-white">
@@ -51,17 +72,29 @@ export default function ToolsIUse() {
 
                 {/* Icon Circle */}
                 <div className="relative flex-shrink-0 w-10 h-10 sm:w-18 sm:h-18 rounded-full">
+                  {/* Smooth fading rotating ring */}
                   <div
                     className="absolute inset-0 rounded-full animate-spin"
                     style={{
-                      animationDuration: '3s',
-                      background:
-                        'conic-gradient(from 120deg, #DDFF00 60deg, #DDFF00 90deg, transparent 180deg, transparent 360deg)',
+                      animationDuration: "4s",
+                      background: `
+        conic-gradient(
+          rgba(221,255,0,0.2),
+          rgba(221,255,0,0.4),
+          rgba(221,255,0,0.4),
+          rgba(221,255,0,0.1),
+          rgba(221,255,0,0.5),
+          rgba(221,255,0,0.4),
+          rgba(221,255,0,0.3),
+          rgba(221,255,0,0.1)
+        )
+      `,
                     }}
-                  ></div>
+                  />
 
+                  {/* Inner circle */}
                   <div className="absolute inset-[2px] rounded-full bg-black flex items-center justify-center">
-                    <div className="text-white">
+                    <div className="text-white group-hover:text-[#DDFF00] transition-colors duration-300">
                       {tool.icon}
                     </div>
                   </div>
