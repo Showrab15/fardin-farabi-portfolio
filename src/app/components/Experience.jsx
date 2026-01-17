@@ -209,6 +209,17 @@ const [viewportAmount, setViewportAmount] = useState(0.3); // default
      window.addEventListener("resize", updateViewport); // handle resize
      return () => window.removeEventListener("resize", updateViewport);
    }, []);
+const [isDesktop, setIsDesktop] = useState(false);
+
+useEffect(() => {
+  const checkScreen = () => {
+    setIsDesktop(window.innerWidth >= 1024);
+  };
+
+  checkScreen(); // initial
+  window.addEventListener("resize", checkScreen);
+  return () => window.removeEventListener("resize", checkScreen);
+}, []);
 
   return (
     <motion.div initial={{ opacity: 0, y: 100 }}
@@ -313,10 +324,15 @@ const [viewportAmount, setViewportAmount] = useState(0.3); // default
 
                     {/* Responsibilities - Expandable on Mobile */}
                     <div className="space-y-3">
-                      <div className={`space-y-3 ${expandedId === exp.id || window.innerWidth >= 1024 ? '' : 'max-h-0 overflow-hidden'} lg:max-h-none transition-all duration-500`}>
+                      <div   className={`space-y-3 ${
+    expandedId === exp.id || isDesktop
+      ? ""
+      : "max-h-0 overflow-hidden"
+  } lg:max-h-none transition-all duration-500`}
+>
                         {exp.points.map((point, i) => (
                           <div key={i} className="flex items-start gap-3 group/item">
-                            <div className="w-1.5 h-1.5 rounded-full bg-[#DDFF00] flex-shrink-0 mt-2 group-hover/item:scale-150 transition-transform duration-300" />
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#DDFF00] shrink-0 mt-2 group-hover/item:scale-150 transition-transform duration-300" />
                             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                               {point}
                             </p>

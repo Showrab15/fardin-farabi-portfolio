@@ -319,8 +319,8 @@ export default function References() {
     },
     {
       text: "During his time as a Web Developer Intern at ASCII System, Fardin demonstrated strong design thinking and a clear understanding of how design and development work together. His ideas and collaborative mindset added real value to the team.",
-      author: "Shakib Hossain",
-      role: "CTO",
+      author: "Sourav Paul",
+      role: "CEO",
       company: "ASCII System",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop",
       color: "from-purple-500 to-pink-500"

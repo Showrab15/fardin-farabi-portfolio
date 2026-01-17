@@ -305,7 +305,7 @@ export default function Projects() {
         </div>
 
         {/* Projects Container */}
-        <div ref={containerRef} className="relative h-[400vh]">
+        <div ref={containerRef} className="relative lg:h-[400vh]">
           <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
             {projects.map((project, index) => {
               // Calculate opacity for smooth transitions

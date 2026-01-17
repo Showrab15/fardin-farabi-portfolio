@@ -10,9 +10,9 @@ export default function SidebarLayout({ children }) {
   useScrollSpy(setActiveSection);
 
   return (
-    <div className="flex min-h-screen bg-black text-white">
+    <div className="flex min-h-screen  text-white">
       <Sidebar activeSection={activeSection} />
-      <main className="flex-1 lg:ml-[260px]">
+      <main className="flex-1 lg:ml-[260px] w-full overflow-x-hidden">
         {children}
       </main>
     </div>

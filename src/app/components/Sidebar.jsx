@@ -83,6 +83,8 @@
 // }
 
 
+
+
 import React, { useState, useEffect } from "react";
 import { Menu, X, Home, Briefcase, Award, Lightbulb, MessageSquare, Settings, Twitter, Linkedin, Github, Dribbble, Instagram, Mail } from "lucide-react";
 
@@ -272,7 +274,7 @@ export default function Sidebar() {
             href="mailto:hello@showrabpaul.com"
             className="flex items-center gap-2 px-4 py-3 rounded-xl bg-[#DDFF00]/10 border border-[#DDFF00]/30 text-[#DDFF00] hover:bg-[#DDFF00]/20 transition-all duration-300 group"
           >
-            <Mail size={16} className="flex-shrink-0" />
+            <Mail size={16} className="shrink-0" />
             <span className="text-xs font-medium truncate">Get in Touch</span>
             <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300">→</span>
           </a>

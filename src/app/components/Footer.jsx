@@ -32,7 +32,7 @@
 //       <div className="max-w-7xl mx-auto">
 //         {/* Main Footer Content */}
 //         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
-          
+
 //           {/* Brand Column */}
 //           <div className="sm:col-span-2 lg:col-span-1">
 //             <h2 className="text-2xl sm:text-3xl font-semibold mb-2">Fardin Farabi</h2>
@@ -132,7 +132,8 @@
 
 "use client"
 import React from 'react';
-import { Mail, Phone, MapPin, Twitter, Linkedin, Github, Dribbble, Instagram, ArrowUp, Heart } from 'lucide-react';
+import { Mail, Phone, MapPin,Behance, Linkedin,  Instagram, ArrowUp, Heart } from 'lucide-react';
+import { FaBehance } from 'react-icons/fa';
 
 export default function Footer() {
   const navigation = [
@@ -151,11 +152,12 @@ export default function Footer() {
   ];
 
   const socialMedia = [
-    { name: 'Twitter', icon: Twitter, href: '#', color: 'hover:text-blue-400' },
-    { name: 'LinkedIn', icon: Linkedin, href: '#', color: 'hover:text-blue-600' },
-    { name: 'GitHub', icon: Github, href: '#', color: 'hover:text-gray-300' },
-    { name: 'Dribbble', icon: Dribbble, href: '#', color: 'hover:text-pink-400' },
-    { name: 'Instagram', icon: Instagram, href: '#', color: 'hover:text-purple-400' }
+    {
+      name: 'Behance', icon: <FaBehance />
+, href: 'https://www.behance.net/fardinfarabi1',},
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/fardin-farabi-84b1462a5?', color: 'hover:text-blue-600' },
+
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/ui.fardin?igsh=azJwenRwMDdneGc0&utm_source=ig_contact_invite', color: 'hover:text-purple-400' }
   ];
 
   const scrollToTop = () => {
@@ -173,7 +175,7 @@ export default function Footer() {
       <div className="mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
-          
+
           {/* Brand Column - Takes more space */}
           <div className="lg:col-span-4">
             <div className="mb-6">
@@ -194,14 +196,14 @@ export default function Footer() {
                 </div>
                 <span className="text-sm">hello@showrabpaul.com</span>
               </a>
-              
+
               <a href="tel:+8801234567890" className="flex items-center gap-3 text-gray-400 hover:text-[#DDFF00] transition-colors duration-300 group">
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#DDFF00]/10 transition-colors duration-300">
                   <Phone className="w-4 h-4" />
                 </div>
                 <span className="text-sm">+880 123 456 7890</span>
               </a>
-              
+
               <div className="flex items-center gap-3 text-gray-400">
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center mt-0.5">
                   <MapPin className="w-4 h-4" />
@@ -219,7 +221,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {navigation.map((item) => (
                 <li key={item.name}>
-                  <a 
+                  <a
                     href={item.href}
                     className="text-gray-400 hover:text-[#DDFF00] transition-colors duration-300 text-sm  flex items-center gap-2 group"
                   >
@@ -239,7 +241,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {projects.map((item) => (
                 <li key={item.name}>
-                  <a 
+                  <a
                     href={item.href}
                     className="text-gray-400 hover:text-[#DDFF00] transition-colors duration-300 text-sm  flex items-center gap-2 group"
                   >
@@ -256,7 +258,7 @@ export default function Footer() {
             <h3 className="text-base sm:text-lg font-semibold mb-6 text-white">
               Stay Connected
             </h3>
-            
+
             {/* Newsletter */}
             <div className="mb-6">
               <p className="text-gray-400 text-sm mb-4">
