@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+
 import {
   Pencil,
   LayoutDashboard,
@@ -9,6 +10,7 @@ import {
   Globe,
   Boxes
 } from "lucide-react";
+import { motion } from 'framer-motion';
 
 export default function Wid() {
   const skills = [
@@ -61,9 +63,35 @@ export default function Wid() {
         "Building consistent design systems and UX strategies to scale products efficiently."
     }
   ];
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
 
   return (
-    <div className=" pt-20 px-4 sm:px-6 lg:px-12 xl:px-16">
+    <motion.div  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  variants={containerVariants}
+  className="pt-20 px-4 sm:px-6 lg:px-12 xl:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Header with border */}
         <h1 className="text-left text-4xl sm:text-5xl  font-medium text-white">
@@ -73,8 +101,10 @@ export default function Wid() {
         {/* Skills Grid */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-4 lg:gap-10">
           {skills.map((skill, index) => (
-            <div
+            <motion.div
               key={index}
+                variants={itemVariants}
+
               className="group relative"
             >
               {/* Card Content */}
@@ -121,10 +151,10 @@ export default function Wid() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
