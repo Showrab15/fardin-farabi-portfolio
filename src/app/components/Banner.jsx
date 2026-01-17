@@ -97,7 +97,7 @@ export default function Banner() {
             {/* Image */}
             <div className="relative w-64 h-80 sm:w-80 sm:h-[28rem] rounded-3xl overflow-hidden border-2 border-[#DDFF00]/40 shadow-[0_0_50px_rgba(221,255,0,0.3)]">
               <img
-                src="/fardin.png"
+                src="https://i.ibb.co.com/ymxD8WnB/fardin.jpg"
                 alt="Fardin Farabi"
                 className="w-full h-full object-cover"
               />
