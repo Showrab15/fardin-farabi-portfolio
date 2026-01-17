@@ -5,7 +5,7 @@ export default function Banner() {
   return (
     <section
       id="intro"
-      className="relative pt-8 px-4 sm:px-6 lg:px-12 xl:px-16 text-white overflow-hidden"
+      className="relative pt-20 sm:pt-8 px-4 sm:px-6 lg:px-12 xl:px-16 text-white overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-20">
@@ -85,8 +85,8 @@ export default function Banner() {
         {/* RIGHT IMAGE */}
         <div className="relative flex justify-center lg:justify-end">
           {/* Multiple glow layers */}
-          <div className="absolute w-72 h-72 sm:w-96 sm:h-96 bg-[#DDFF00]/20 blur-3xl rounded-full -z-10 animate-pulse" />
-          <div className="absolute w-72 h-72 sm:w-96 sm:h-96 bg-purple-500/10 blur-3xl rounded-full -z-10 animate-pulse" style={{ animationDelay: '0.5s' }} />
+          <div className="absolute w-72 h-80 sm:w-96 sm:h-96 bg-[#DDFF00]/20 blur-3xl rounded-full -z-10 animate-pulse" />
+          <div className="absolute w-72 h-80 sm:w-96 sm:h-96 bg-purple-500/10 blur-3xl rounded-full -z-10 animate-pulse" style={{ animationDelay: '0.5s' }} />
 
           {/* Image container with decorative elements */}
           <div className="relative">

@@ -151,7 +151,7 @@ export default function Sidebar() {
       {/* Mobile menu button */}
       <button
         onClick={() => setOpen(true)}
-        className="fixed top-5 left-5 z-50 rounded-xl border border-white/10 bg-black/80 backdrop-blur-sm p-3 text-white hover:border-[#DDFF00]/50 transition-all duration-300 lg:hidden"
+        className="fixed top-5 left-3 z-50 rounded-xl border border-white/10 bg-black/80 backdrop-blur-sm  text-[#DDFF00] hover:border-[#DDFF00]/50 transition-all duration-300 lg:hidden"
       >
         <Menu size={20} />
       </button>

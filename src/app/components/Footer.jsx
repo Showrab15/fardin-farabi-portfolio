@@ -188,11 +188,11 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="mailto:hello@showrabpaul.com" className="flex items-center gap-3 text-gray-400 hover:text-[#DDFF00] transition-colors duration-300 group">
+              <a href="mailto:fardinfarabi1998@gmail.com" className="flex items-center gap-3 text-gray-400 hover:text-[#DDFF00] transition-colors duration-300 group">
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#DDFF00]/10 transition-colors duration-300">
                   <Mail className="w-4 h-4" />
                 </div>
-                <span className="text-sm">hello@showrabpaul.com</span>
+                <span className="text-sm">fardinfarabi1998@gmail.com</span>
               </a>
 
               <a href="tel:+8801234567890" className="flex items-center gap-3 text-gray-400 hover:text-[#DDFF00] transition-colors duration-300 group">
