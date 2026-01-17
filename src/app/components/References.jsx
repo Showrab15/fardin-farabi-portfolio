@@ -335,7 +335,7 @@ export default function References() {
   ];
 
   return (
-    <div className="relative pt-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
+    <div className=" pt-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
       {/* Dynamic Background Grid */}
       <div className="absolute inset-0 -z-10 opacity-20">
         <div className="absolute inset-0" style={{
