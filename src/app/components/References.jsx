@@ -313,7 +313,7 @@ text: "Fardin contributed significantly to our UI/UX projects at BitByte Innovat
       author: "Mohammad Ashraf Ali",
       role: "CEO",
       company: "Bibtbyte Innovations",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop",
+      image: "https://bitbyteinnovations.com/data/team-images/ashraf.jpeg",
       color: "from-cyan-500 to-blue-500"
     },
     {
@@ -329,7 +329,7 @@ text: "I’m really happy to have worked with Fardin. He helped translate Figma 
       author: "Showrab Paul",
       role: "Mern Stack Developer",
       // company: "CoreTech Solutions",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop",
+      image: "/showrab.jpg",
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -370,7 +370,7 @@ text: "I’m really happy to have worked with Fardin. He helped translate Figma 
               <div className="relative z-10">
                 {/* Quote Mark */}
                 <div className="w-16 h-16 mb-8 bg-[#DDFF00]/10 rounded-2xl flex items-center justify-center">
-                  <span className="text-4xl text-[#DDFF00]">"</span>
+                  <span className="text-4xl text-[#DDFF00]">{`"`}</span>
                 </div>
 
                 <p className="text-xl lg:text-2xl text-white/90 leading-relaxed mb-12 font-light">
@@ -380,7 +380,7 @@ text: "I’m really happy to have worked with Fardin. He helped translate Figma 
                 {/* Author Card */}
                 <div className="flex items-center gap-4">
                   <div className={`relative w-16 h-16 rounded-full overflow-hidden ring-2 ring-transparent group-hover:ring-[#DDFF00]/30 transition-all duration-300`}>
-                    <img src={testimonials[0].image} alt={testimonials[0].author} className="w-full h-full object-cover" />
+                    <img src={testimonials[0].image} alt={testimonials[0].author} className="w-full h-full object-center" />
                   </div>
                   <div>
                     <p className="text-white font-semibold text-lg">{testimonials[0].author}</p>
@@ -408,7 +408,7 @@ text: "I’m really happy to have worked with Fardin. He helped translate Figma 
                   <div className="relative z-10">
                     <div className="flex items-start gap-3 mb-4">
                       <div className={`relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-transparent group-hover:ring-[#DDFF00]/30 transition-all duration-300`}>
-                        <img src={testimonial.image} alt={testimonial.author} className="w-full h-full object-cover" />
+                        <img src={testimonial.image} alt={testimonial.author} className="w-full h-full object-center" />
                       </div>
                       <div className="flex-1">
                         <p className="text-white font-semibold">{testimonial.author}</p>
@@ -418,7 +418,7 @@ text: "I’m really happy to have worked with Fardin. He helped translate Figma 
                     </div>
 
                     <p className="text-gray-300 leading-relaxed text-sm">
-                      "{testimonial.text}"
+                      {`"${testimonial.text}"`}
                     </p>
                   </div>
                 </div>
@@ -461,7 +461,7 @@ text: "I’m really happy to have worked with Fardin. He helped translate Figma 
                   {`Let's`} Create Together
                 </h3>
                 <p className="text-gray-400 mb-8 text-lg">
-                  Ready to bring your vision to life? Let's discuss your next project.
+                  Ready to bring your vision to life? {`Let's`} discuss your next project.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button className="group relative px-4 py-4 bg-[#DDFF00] text-black font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105">
