@@ -45,9 +45,9 @@ export default function Banner() {
 
           {/* Headline with improved typography */}
           <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 leading-relaxed max-w-xl">
-            I design user focused systems that  
+            I design user focused systems that
             <span className="text-[#DDFF00] font-semibold"> help brands scale </span>
-            with clarity and consistency 
+            with clarity and consistency
           </p>
 
           {/* Stats */}
@@ -68,33 +68,27 @@ export default function Banner() {
 
           {/* Buttons with improved styling */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button
-              onClick={() => {
-                const url = '/Fardin-Farabi-Chowdhury.pdf';
-                window.open(url, '_blank');
-
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = 'Fardin-Farabi-Chowdhury.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://wa.me/+8801878131404?text=Hi!%20I%E2%80%99m%20interested%20in%20working%20with%20you.%20Let%E2%80%99s%20chat!"
               className="group relative bg-[#DDFF00] text-black font-semibold px-8 py-4 rounded-2xl
                transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden z-10"
             >
               <span className="relative z-10">Get in Touch</span>
-
               {/* THIS was blocking clicks */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#DDFF00] to-[#CCEE00] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-            </button>
+            </a>
+       <a
+  href="/Fardin-Farabi-Chowdhury.pdf"
+  download="Fardin-Farabi-Chowdhury.pdf"
+  className="relative overflow-hidden border-2 border-[#DDFF00]/50 text-[#DDFF00] font-semibold px-8 py-4 rounded-2xl
+             hover:bg-[#DDFF00]/10 transition-all duration-300 hover:border-[#DDFF00] hover:scale-105 active:scale-95 backdrop-blur-sm flex items-center justify-center gap-2 group"
+>
+  <span className="relative z-10">View Portfolio</span>
+  <span className="absolute inset-0 bg-[#DDFF00]/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out rounded-2xl"></span>
+  <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">↓</span>
+</a>
 
-
-            <button className="cursor-pointer group border-2 border-[#DDFF00]/50 text-[#DDFF00] font-semibold px-8 py-4 rounded-2xl
-             hover:bg-[#DDFF00]/10 transition-all duration-300 hover:border-[#DDFF00] hover:scale-105 active:scale-95 backdrop-blur-sm">
-              View Portfolio
-              <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
-            </button>
           </div>
         </div>
 
