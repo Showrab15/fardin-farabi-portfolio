@@ -164,7 +164,7 @@ export default function AboutServices() {
   const services = [
     {
       title: "Landing Page Design",
-      price: "$1999",
+      price: "$150",
       icon: Sparkles,
       features: [
         "High-converting, conversion-focused UI",
@@ -176,7 +176,7 @@ export default function AboutServices() {
     },
     {
       title: "Website UI/UX Design",
-      price: "$3499",
+      price: "$1200",
       icon: Zap,
       features: [
         "Modern, scalable website design system",
@@ -188,7 +188,7 @@ export default function AboutServices() {
     },
     {
       title: "App UI/UX Design",
-      price: "$3999",
+      price: "$1000",
       icon: Smartphone,
       features: [
         "iOS & Android app interface design",
@@ -306,10 +306,10 @@ const itemVariants = {
                     </div>
 
                     {/* Learn More Link */}
-                    <button className="mt-6 flex items-center gap-2 text-[#DDFF00] font-medium text-sm group/btn">
+                    {/* <button className="mt-6 flex items-center gap-2 text-[#DDFF00] font-medium text-sm group/btn">
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               );
@@ -383,9 +383,9 @@ const itemVariants = {
                       className="w-full bg-white/5 border border-white/10 rounded-2xl px-4 py-4 text-white focus:outline-none focus:border-[#DDFF00]/50 transition-colors duration-300 appearance-none cursor-pointer"
                     >
                       <option value="" className="bg-black">Choose a service...</option>
-                      <option value="landing" className="bg-black">Landing Page Design - $1999</option>
-                      <option value="website" className="bg-black">Website UI/UX Design - $3499</option>
-                      <option value="app" className="bg-black">App UI/UX Design - $3999</option>
+                      <option value="landing" className="bg-black">Landing Page Design - $150</option>
+                      <option value="website" className="bg-black">Website UI/UX Design - $1200</option>
+                      <option value="app" className="bg-black">App UI/UX Design - $1000</option>
                       <option value="others" className="bg-black">Others  -/-</option>
                     </select>
                   </div>
@@ -426,7 +426,7 @@ const itemVariants = {
                   <p className="text-gray-400 text-sm text-center">
                     Or email directly at{' '}
                     <a href="mailto:hello@showrabpaul.com" className="text-[#DDFF00] hover:underline">
-                      hello@showrabpaul.com
+                     fardinfarabi1998@gmail.com
                     </a>
                   </p>
                 </div>

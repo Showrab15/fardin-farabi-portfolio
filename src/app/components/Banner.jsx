@@ -5,7 +5,7 @@ export default function Banner() {
   return (
     <section
       id="intro"
-      className="relative pt-20 sm:pt-8 px-4 sm:px-6 lg:px-12 xl:px-16 text-white overflow-hidden"
+      className="relative pt-20 pb-10 sm:pt-8 px-4 sm:px-6 lg:px-12 xl:px-16 text-white overflow-hidden"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-20">
@@ -45,10 +45,9 @@ export default function Banner() {
 
           {/* Headline with improved typography */}
           <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 leading-relaxed max-w-xl">
-            I craft digital experiences that blend{" "}
-            <span className="text-[#DDFF00] font-semibold">beautiful design</span>
-            {" "}with{" "}
-            <span className="text-white font-semibold">intuitive functionality</span>
+            I design user focused systems that  
+            <span className="text-[#DDFF00] font-semibold"> help brands scale </span>
+            with clarity and consistency 
           </p>
 
           {/* Stats */}
@@ -69,13 +68,30 @@ export default function Banner() {
 
           {/* Buttons with improved styling */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <button onClick={() => {
-              console.log("hello") }}
-              className="group relative bg-[#DDFF00] text-black font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:shadow-[0_0_30px_rgba(221,255,0,0.5)] hover:scale-105 active:scale-95 overflow-hidden">
+            <button
+              onClick={() => {
+                const url = '/Fardin-Farabi-Chowdhury.pdf';
+                window.open(url, '_blank');
+
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'Fardin-Farabi-Chowdhury.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
+              className="group relative bg-[#DDFF00] text-black font-semibold px-8 py-4 rounded-2xl
+               transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden z-10"
+            >
               <span className="relative z-10">Get in Touch</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#DDFF00] to-[#CCEE00] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              {/* THIS was blocking clicks */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#DDFF00] to-[#CCEE00] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
             </button>
-            <button className="group border-2 border-[#DDFF00]/50 text-[#DDFF00] font-semibold px-8 py-4 rounded-2xl hover:bg-[#DDFF00]/10 transition-all duration-300 hover:border-[#DDFF00] hover:scale-105 active:scale-95 backdrop-blur-sm">
+
+
+            <button className="cursor-pointer group border-2 border-[#DDFF00]/50 text-[#DDFF00] font-semibold px-8 py-4 rounded-2xl
+             hover:bg-[#DDFF00]/10 transition-all duration-300 hover:border-[#DDFF00] hover:scale-105 active:scale-95 backdrop-blur-sm">
               View Portfolio
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
             </button>
@@ -95,7 +111,7 @@ export default function Banner() {
             <div className="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-[#DDFF00] rounded-br-3xl" />
 
             {/* Image */}
-            <div className="relative w-64 h-80 sm:w-80 sm:h-[28rem] rounded-3xl overflow-hidden border-2 border-[#DDFF00]/40 shadow-[0_0_50px_rgba(221,255,0,0.3)]">
+            <div className="relative w-64 h-80 sm:w-80 sm:h-[28rem] rounded-3xl overflow-hidden border-2 border-[#DDFF00]/40 ">
               <img
                 src="https://i.ibb.co.com/ymxD8WnB/fardin.jpg"
                 alt="Fardin Farabi"
@@ -106,8 +122,8 @@ export default function Banner() {
             </div>
 
             {/* Floating badge */}
-            <div className="text-center absolute -bottom-6 left-1/2 -translate-x-1/2 px-2 py-3 bg-black/80 backdrop-blur-md border border-[#DDFF00]/50 rounded-full shadow-lg">
-              <span className="text-white text-center text-xs font-medium">✨ Award-Winning Designer</span>
+            <div className="text-center absolute -bottom-6  right-2    sm:left-1/2 -translate-x-1/2 px-2 py-3 bg-black/80 backdrop-blur-md border border-[#DDFF00]/50 rounded-full shadow-lg">
+              <span className="text-white text-center text-[8px] sm:text-xs font-medium">✨ Award-Winning Designer</span>
             </div>
           </div>
         </div>

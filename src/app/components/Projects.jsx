@@ -349,10 +349,10 @@ export default function Projects() {
         {/* View All Projects Button */}
         <div className="text-center mt-16">
           <button className="group relative px-8 py-4 bg-[#DDFF00] text-black font-bold rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-[0_0_30px_rgba(221,255,0,0.5)] hover:scale-105">
-            <span className="relative z-10 flex items-center justify-center gap-2">
+            <a  href="https://www.behance.net/fardinfarabi1" className="relative z-10 flex items-center justify-center gap-2">
               View All Projects
               <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-300" />
-            </span>
+            </a>
             <div className="absolute inset-0 bg-gradient-to-r from-[#DDFF00] to-[#CCEE00] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </button>
         </div>

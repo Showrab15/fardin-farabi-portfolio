@@ -87,6 +87,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Menu, X, Home, Briefcase, Award, Lightbulb, MessageSquare, Settings, Twitter, Linkedin, Github, Dribbble, Instagram, Mail } from "lucide-react";
+import { FaBehanceSquare } from "react-icons/fa";
 
 const menu = [
   { label: "Intro", id: "intro", icon: Home },
@@ -99,7 +100,10 @@ const menu = [
 
 const socialLinks = [
   { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/fardin-farabi-84b1462a5?", color: "hover:text-blue-600" },
+  
   { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/ui.fardin?igsh=azJwenRwMDdneGc0&utm_source=ig_contact_invite", color: "hover:text-purple-400" },
+    { name: 'Behance', icon: FaBehanceSquare, href: 'https://www.behance.net/fardinfarabi1', color: 'hover:text-[#1769FF]' }
+
 ];
 
 export default function Sidebar() {
@@ -268,7 +272,10 @@ export default function Sidebar() {
 
           {/* Email Contact */}
           <a
-            href="mailto:hello@showrabpaul.com"
+            href="mailto:fardinfarabi1998@gmail.com"
+              target="_blank" 
+  rel="noopener noreferrer"
+
             className="flex items-center gap-2 px-4 py-3 rounded-xl bg-[#DDFF00]/10 border border-[#DDFF00]/30 text-[#DDFF00] hover:bg-[#DDFF00]/20 transition-all duration-300 group"
           >
             <Mail size={16} className="shrink-0" />

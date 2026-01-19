@@ -41,7 +41,7 @@ export default function ToolsIUse() {
     icon: <Layers size={22} strokeWidth={1.5} />,
     title: "Adobe Illustrator",
     description:
-      "Creating icons, vector assets, illustrations, and scalable UI elements."
+      "Create Mockup for Desktop, Mobile and Tablet Screen"
   },
   // {
   //   icon: <Monitor size={22} strokeWidth={1.5} />,
