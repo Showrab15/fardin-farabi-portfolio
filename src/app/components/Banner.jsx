@@ -78,16 +78,16 @@ export default function Banner() {
               <span className="relative z-10">Get in Touch</span>
               {/* THIS was blocking clicks */}
             </a>
-       <a
-  href="/Fardin-Farabi-Chowdhury.pdf"
-  download="Fardin-Farabi-Chowdhury.pdf"
-  className="relative overflow-hidden border-2 border-[#DDFF00]/50 text-[#DDFF00] font-semibold px-8 py-4 rounded-2xl
+            <a
+              href="/Fardin-Farabi-Chowdhury.pdf"
+              download="Fardin-Farabi-Chowdhury.pdf"
+              className="relative overflow-hidden border-2 border-[#DDFF00]/50 text-[#DDFF00] font-semibold px-8 py-4 rounded-2xl
              hover:bg-[#DDFF00]/10 transition-all duration-300 hover:border-[#DDFF00] hover:scale-105 active:scale-95 backdrop-blur-sm flex items-center justify-center gap-2 group"
->
-  <span className="relative z-10">View Portfolio</span>
-  <span className="absolute inset-0 bg-[#DDFF00]/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out rounded-2xl"></span>
-  <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">↓</span>
-</a>
+            >
+              <span className="relative z-10">Download Cv</span>
+              <span className="absolute inset-0 bg-[#DDFF00]/20 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out rounded-2xl"></span>
+              <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">↓</span>
+            </a>
 
           </div>
         </div>

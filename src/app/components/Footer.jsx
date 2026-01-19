@@ -4,6 +4,8 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Behance, Linkedin, Instagram, ArrowUp, Heart } from 'lucide-react';
 import { FaBehance, FaBehanceSquare } from 'react-icons/fa';
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 export default function Footer() {
   const navigation = [
@@ -40,6 +42,52 @@ export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+  const [footerEmail, setFooterEmail] = React.useState("");
+  const [loading, setLoading] = React.useState(false);
+  const isValidEmail = (email) => {
+    // Simple regex to validate standard emails
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleFooterSubmit = async () => {
+    // 1️⃣ Check if empty
+    if (!footerEmail) {
+      toast.error("Please enter your email");
+      return;
+    }
+
+    // 2️⃣ Check if invalid
+    if (!isValidEmail(footerEmail)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      // 3️⃣ Send email using EmailJS
+      const result = await emailjs.send(
+        'service_s2ykmbl',      // your service ID
+        'template_xy6rz89',     // your template ID
+        { email: footerEmail }, // template params
+        'tYbO0EZ1XPMA3P9Od'    // public key
+      );
+
+      console.log("EmailJS result:", result);
+
+      // 4️⃣ Show success toast
+      toast.success("Thanks for staying connected! 🚀");
+
+      // Clear input
+      setFooterEmail("");
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast.error("Failed to send. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
 
   return (
     <footer className="relative  text-white pt-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
@@ -67,30 +115,28 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a target="_blank"
-                rel="noopener noreferrer"
-                href="mailto:fardinfarabi1998@gmail.com" className="flex items-center gap-3 text-gray-400 hover:text-[#DDFF00] transition-colors duration-300 group">
+              <p
+                 className="flex items-center gap-3 text-gray-400 hover:text-[#DDFF00] transition-colors duration-300 group">
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#DDFF00]/10 transition-colors duration-300">
                   <Mail className="w-4 h-4" />
                 </div>
                 <span className="text-sm">fardinfarabi1998@gmail.com</span>
-              </a>
+              </p>
 
-              <a target="_blank"
-                rel="noopener noreferrer"
-                href="https://wa.me/+8801878131404?text=Hi!%20I%E2%80%99m%20interested%20in%20working%20with%20you.%20Let%E2%80%99s%20chat!"
+              <p target="_blank"
+
                 className="flex items-center gap-3 text-gray-400 hover:text-[#DDFF00] transition-colors duration-300 group">
                 <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#DDFF00]/10 transition-colors duration-300">
                   <Phone className="w-4 h-4" />
                 </div>
                 <span className="text-sm">+880 1878 131 404</span>
-              </a>
+              </p>
 
-              <div className="flex items-center gap-3 text-gray-400">
-                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center mt-0.5">
+              <div className="flex items-center gap-3 text-gray-400 hover:text-[#DDFF00] transition-colors duration-300 group">
+                <div className="w-10 h-10 rounded-full bg-white/5 group-hover:bg-[#DDFF00]/10 transition-colors duration-300 flex items-center justify-center mt-0.5">
                   <MapPin className="w-4 h-4" />
                 </div>
-                <span className="text-sm leading-relaxed">Chittagong, Bangladesh</span>
+                <span className="hover:text-[#DDFF00] transition-colors duration-300 group text-sm leading-relaxed">Chittagong, Bangladesh</span>
               </div>
             </div>
           </div>
@@ -151,12 +197,20 @@ export default function Footer() {
                 <input
                   type="email"
                   placeholder="Your email"
+                  value={footerEmail}
+                  onChange={(e) => setFooterEmail(e.target.value)}
                   className="w-40 bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[#DDFF00]/50 transition-colors duration-300"
                 />
-                <button className="px-6  bg-[#DDFF00] text-black font-semibold rounded-xl hover:bg-[#CCEE00] transition-colors duration-300">
-                  <ArrowUp className="w-4 h-3 rotate-45" />
+
+                <button
+                  onClick={handleFooterSubmit}
+                  disabled={loading}
+                  className="px-6 bg-[#DDFF00] text-black font-semibold rounded-xl hover:bg-[#CCEE00] transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  <ArrowUp className={`w-4 h-3 rotate-45 ${loading ? "animate-pulse" : ""}`} />
                 </button>
               </div>
+
             </div>
 
             {/* Social Media Icons */}
@@ -169,8 +223,8 @@ export default function Footer() {
                     <a
                       key={social.name}
                       href={social.href}
-                        target="_blank" 
-  rel="noopener noreferrer"
+                      target="_blank"
+                      rel="noopener noreferrer"
 
                       className={`w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center ${social.color} hover:border-current transition-all duration-300 hover:scale-110`}
                       aria-label={social.name}
