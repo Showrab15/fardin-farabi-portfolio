@@ -119,7 +119,9 @@ export default function Projects() {
             scrollYProgress={scrollYProgress}
           />
         ))}
+
       </div>
+      
     </section>
   );
 }

@@ -24,12 +24,12 @@ const projects = [
   },
   {
     id: 3,
-    image: "https://fardin-portfolio.netlify.app/assets/project3-iE15qzdc.jpg",
-    title: "Vapeshop Landing Page",
+    image: "/furniture.jpg",
+    title: "FUrniture Landing Page",
     subtitle:
-      "Bold landing page focused on branding and product highlights.",
+      "Minimal furniture website showcasing products elegantly.",
     number: "03",
-    url: "https://www.behance.net/gallery/232472791/Contact-Dashboard"
+    url: "https://www.behance.net/gallery/209896509/Furniture-Landing-Page"
   },
 ];
 
@@ -92,6 +92,17 @@ export default function Projects() {
           </div>
         );
       })}
+      {/* View All Projects Button */}
+        <div className="text-center ">
+          <button className="group relative px-8 py-4 bg-[#DDFF00] text-black font-bold rounded-2xl overflow-hidden
+           transition-all duration-300 hover:shadow-[0_0_10px_rgba(221,255,0,0.5)] hover:scale-105">
+            <a  href="https://www.behance.net/fardinfarabi1" className="relative z-10 flex items-center justify-center gap-2">
+              View All Projects
+              <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-300" />
+            </a>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#DDFF00] to-[#CCEE00] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </button>
+        </div>
     </section>
   );
 }
