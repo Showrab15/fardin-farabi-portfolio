@@ -3,7 +3,8 @@
 import Banner from "./components/Banner";
 import Experience from "./components/Experience";
 import Footer from "./components/Footer";
-import Projects from "./components/Projects";
+import Projects from "./components/O";
+// import Projects from "./components/Projects";
 import References from "./components/References";
 import AboutServices from "./components/Services";
 import ToolsIUse from "./components/Tools";
@@ -14,6 +15,7 @@ export default function Home() {
     <>
     <Banner/>
     <Projects/>
+    {/* <Projects/> */}
     <Experience/>
     <Wid/>
     <ToolsIUse/>
