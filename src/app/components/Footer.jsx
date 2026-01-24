@@ -90,7 +90,7 @@ export default function Footer() {
 
 
   return (
-    <footer id ="footer" className="relative  text-white pt-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
+    <footer className="relative  text-white pt-20 px-4 sm:px-6 lg:px-12 xl:px-16 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 right-20 w-96 h-96 bg-[#DDFF00]/5 rounded-full blur-3xl" />
