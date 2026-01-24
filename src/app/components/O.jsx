@@ -15,21 +15,30 @@ const projects = [
   },
   {
     id: 2,
-    image: "https://fardin-portfolio.netlify.app/assets/project2-CSgm0AoP.jpg",
-    title: "Contact Dashboard",
-    subtitle:
-      "An intuitive dashboard for managing contacts with clarity and efficiency.",
-    number: "02",
-    url: "https://www.behance.net/gallery/232472791/Contact-Dashboard"
-  },
-  {
-    id: 3,
     image: "/furniture.jpg",
     title: "Furniture Landing Page",
     subtitle:
       "Minimal furniture website showcasing products elegantly.",
-    number: "03",
+    number: "02",
     url: "https://www.behance.net/gallery/209896509/Furniture-Landing-Page"
+  },
+   {
+    id: 3,
+    image: "/hotel.jpg",
+    title: "Mati-ta Hotel Landing page",
+    subtitle:
+      "A clean, user-centric hotel landing page that simplifies services and guides guests to book with ease.",
+    number: "03",
+    url: "https://www.behance.net/gallery/209372263/Hotel-Resort-Landing-Page"
+  },
+   {
+    id: 4,
+    image: "/hotel.jpg",
+    title: "POOKIE App Case Study",
+    subtitle:
+      "A user centric marketplace app for buying and selling cats, combined with an integrated accessories store for a complete pet care experience.",
+    number: "04",
+    url: "https://www.behance.net/gallery/207863975/POOKIE-app-UX-case-study"
   },
 ];
 
