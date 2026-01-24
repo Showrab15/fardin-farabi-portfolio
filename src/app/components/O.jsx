@@ -33,7 +33,7 @@ const projects = [
   },
    {
     id: 4,
-    image: "/hotel.jpg",
+    image: "/pokkie.jpg",
     title: "POOKIE App Case Study",
     subtitle:
       "A user centric marketplace app for buying and selling cats, combined with an integrated accessories store for a complete pet care experience.",

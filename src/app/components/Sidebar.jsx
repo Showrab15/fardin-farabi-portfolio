@@ -95,7 +95,7 @@ export default function Sidebar() {
         `}
       >
         {/* Header */}
-        <div className="relative px-6 py-8 border-b border-white/10">
+        <div className="relative px-6 py-4 border-b border-white/10">
           {/* Mobile close button */}
           <button
             onClick={() => setOpen(false)}
@@ -115,7 +115,7 @@ export default function Sidebar() {
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 px-6 py-8 overflow-y-auto scrollbar-custom">
+        <nav className="flex-1 px-6 py-6 overflow-y-auto scrollbar-custom">
           <div className="space-y-2">
             {menu.map((item) => {
               const Icon = item.icon;
@@ -200,7 +200,7 @@ export default function Sidebar() {
 
           {/* Copyright */}
           <p className="text-xs text-gray-600 mt-4 text-center">
-            © 2025 Fardin Farabi
+            © 2026 Fardin Farabi
           </p>
         </div>
       </aside>
