@@ -99,7 +99,7 @@ export default function Footer() {
 
       <div className="mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-8">
 
           {/* Brand Column - Takes more space */}
           <div className="lg:col-span-4">

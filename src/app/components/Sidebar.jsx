@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X, Home, Briefcase, Award, Lightbulb, MessageSquare, Settings, Twitter, Linkedin, Github, Dribbble, Instagram, Mail } from "lucide-react";
 import { FaBehanceSquare } from "react-icons/fa";
 
@@ -10,6 +10,7 @@ const menu = [
   { label: "Skills", id: "skills", icon: Lightbulb },
   { label: "References", id: "references", icon: MessageSquare },
   { label: "Services", id: "services", icon: Settings },
+  { label: "Footer", id: "footer", icon: Settings },
 ];
 
 const socialLinks = [
@@ -23,6 +24,7 @@ const socialLinks = [
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("intro");
+const itemRefs = useRef({});
 
   useEffect(() => {
   const handleScroll = () => {
@@ -64,6 +66,17 @@ export default function Sidebar() {
     }
     setOpen(false);
   };
+useEffect(() => {
+  const el = itemRefs.current[activeSection];
+
+  if (el) {
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest",
+    });
+  }
+}, [activeSection]);
 
   return (
     <>
@@ -124,6 +137,8 @@ export default function Sidebar() {
               return (
                 <button
                   key={item.id}
+                    ref={(el) => (itemRefs.current[item.id] = el)}
+
                   onClick={() => scrollToSection(item.id)}
                   className={`
                     group relative w-full flex items-center gap-3 px-4 py-3 rounded-xl
