@@ -9,8 +9,7 @@ const menu = [
   { label: "Experience", id: "experience", icon: Award },
   { label: "Skills", id: "skills", icon: Lightbulb },
   { label: "References", id: "references", icon: MessageSquare },
-  { label: "Services", id: "services", icon: Settings },
-  { label: "Footer", id: "footer", icon: Settings },
+  { label: "Services", id: "services", icon: Settings }
 ];
 
 const socialLinks = [
