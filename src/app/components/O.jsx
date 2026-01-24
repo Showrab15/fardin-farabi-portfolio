@@ -25,7 +25,7 @@ const projects = [
   {
     id: 3,
     image: "/furniture.jpg",
-    title: "FUrniture Landing Page",
+    title: "Furniture Landing Page",
     subtitle:
       "Minimal furniture website showcasing products elegantly.",
     number: "03",
