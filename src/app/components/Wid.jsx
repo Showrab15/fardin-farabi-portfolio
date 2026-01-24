@@ -11,6 +11,7 @@ import {
   Boxes
 } from "lucide-react";
 import { motion } from 'framer-motion';
+import ToolsIUse from "./Tools";
 
 export default function Wid() {
   const skills = [
@@ -87,7 +88,8 @@ const itemVariants = {
 };
 
   return (
-    <motion.div id="skills" initial="hidden"
+    <div id="skills">
+      <motion.div  initial="hidden"
   whileInView="visible"
   viewport={{ once: true, amount: 0.2 }}
   variants={containerVariants}
@@ -156,5 +158,8 @@ const itemVariants = {
         </div>
       </div>
     </motion.div>
+    <ToolsIUse/>
+    </div>
+    
   );
 }
