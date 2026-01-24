@@ -35,7 +35,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="pt-20 text-white px-4 sm:px-6 lg:px-12 xl:px-16 space-y-32">
+    <section id="work" className="pt-20 text-white px-4 sm:px-6 lg:px-12 xl:px-16 space-y-32">
       {projects.map((project, i) => {
         const isEven = i % 2 === 0;
 
