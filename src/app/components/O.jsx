@@ -4,22 +4,22 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const projects = [
-  {
-    id: 1,
-    image: "https://fardin-portfolio.netlify.app/assets/project1-Dd--GYLN.jpg",
-    title: "Agency Landing Page",
-    subtitle:
-      "A modern landing page designed for creative agencies with strong hierarchy.",
-    number: "01",
-    url: "https://www.behance.net/gallery/232476519/Agency-Landing-Page"
-  },
+  // {
+  //   id: 1,
+  //   image: "https://fardin-portfolio.netlify.app/assets/project1-Dd--GYLN.jpg",
+  //   title: "Agency Landing Page",
+  //   subtitle:
+  //     "A modern landing page designed for creative agencies with strong hierarchy.",
+  //   number: "01",
+  //   url: "https://www.behance.net/gallery/232476519/Agency-Landing-Page"
+  // },
   {
     id: 2,
     image: "/furniture.jpg",
     title: "Furniture Landing Page",
     subtitle:
       "Minimal furniture website showcasing products elegantly.",
-    number: "02",
+    number: "01",
     url: "https://www.behance.net/gallery/209896509/Furniture-Landing-Page"
   },
    {
@@ -28,7 +28,7 @@ const projects = [
     title: "Mati-ta Hotel Landing page",
     subtitle:
       "A clean, user-centric hotel landing page that simplifies services and guides guests to book with ease.",
-    number: "03",
+    number: "02",
     url: "https://www.behance.net/gallery/209372263/Hotel-Resort-Landing-Page"
   },
    {
@@ -37,8 +37,17 @@ const projects = [
     title: "POOKIE App Case Study",
     subtitle:
       "A user centric marketplace app for buying and selling cats, combined with an integrated accessories store for a complete pet care experience.",
-    number: "04",
+    number: "03",
     url: "https://www.behance.net/gallery/207863975/POOKIE-app-UX-case-study"
+  },
+   {
+    id: 4,
+    image: "/ScaleXO.jpg",
+    title: "ScaleXO SaaS Case Study",
+    subtitle:
+      "ScaleXO helps businesses scale faster with smart digital solutions focused on growth, efficiency and impact.",
+    number: "04",
+    url: "https://www.behance.net/gallery/242943125/ScaleXO-SaaS-Product-Design-Case-Study"
   },
 ];
 
