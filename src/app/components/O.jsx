@@ -4,17 +4,9 @@ import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const projects = [
-  // {
-  //   id: 1,
-  //   image: "https://fardin-portfolio.netlify.app/assets/project1-Dd--GYLN.jpg",
-  //   title: "Agency Landing Page",
-  //   subtitle:
-  //     "A modern landing page designed for creative agencies with strong hierarchy.",
-  //   number: "01",
-  //   url: "https://www.behance.net/gallery/232476519/Agency-Landing-Page"
-  // },
+ 
   {
-    id: 2,
+    id: 1,
     image: "/furniture.jpg",
     title: "Furniture Landing Page",
     subtitle:
@@ -23,7 +15,7 @@ const projects = [
     url: "https://www.behance.net/gallery/209896509/Furniture-Landing-Page"
   },
    {
-    id: 3,
+    id: 2,
     image: "/hotel.jpg",
     title: "Mati-ta Hotel Landing page",
     subtitle:
@@ -32,7 +24,7 @@ const projects = [
     url: "https://www.behance.net/gallery/209372263/Hotel-Resort-Landing-Page"
   },
    {
-    id: 4,
+    id: 3,
     image: "/pokkie.jpg",
     title: "POOKIE App Case Study",
     subtitle:
@@ -68,9 +60,10 @@ export default function Projects() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className={`relative rounded-3xl overflow-hidden ${
-                isEven ? "order-1" : "order-2"
-              }`}
+           className={`relative rounded-3xl overflow-hidden 
+  ${isEven ? "lg:order-1" : "lg:order-2"}
+`}
+
             >
               <img
                 src={project.image}
@@ -85,9 +78,10 @@ export default function Projects() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-              className={`relative ${
-                isEven ? "order-2" : "order-1"
-              }`}
+              className={`relative 
+  ${isEven ? "lg:order-2" : "lg:order-1"}
+`}
+
             >
               {/* Background Number */}
               <div className="absolute -top-20 left-0 text-[120px] font-bold text-white/5 select-none">
