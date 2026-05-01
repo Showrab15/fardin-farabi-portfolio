@@ -1,127 +1,129 @@
-// "use client";
-// import { motion, useScroll, useTransform } from "framer-motion";
-// import { ArrowBigUp, ArrowUpRight } from "lucide-react";
-// import Link from "next/link";
-// import { useRef } from "react";
+"use client";
+import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
-// const projects = [
-//   {
-//     id: 1,
-//     image: "https://fardin-portfolio.netlify.app/assets/project1-Dd--GYLN.jpg",
-//     title: "Agency Landing Page",
-//     subtitle: "A modern landing page designed for creative agencies with strong hierarchy and conversion-focused layout.",
-//     number: "01",
-//   },
-//   {
-//     id: 2,
-//     image: "https://fardin-portfolio.netlify.app/assets/project2-CSgm0AoP.jpg",
-//     title: "Contact Dashboard",
-//     subtitle: "An intuitive dashboard for managing contacts with clarity and efficiency.",
-//     number: "02",
-//   },
-//   {
-//     id: 3,
-//     image: "https://fardin-portfolio.netlify.app/assets/project3-iE15qzdc.jpg",
-//     title: "Vapeshop Landing Page",
-//     subtitle: "Bold landing page focused on branding and product highlights.",
-//     number: "03",
-//   },
-//   {
-//     id: 4,
-//     image: "https://fardin-portfolio.netlify.app/assets/project4-hzAYbF18.jpg",
-//     title: "Furniture Landing Page",
-//     subtitle: "Minimal furniture website showcasing products elegantly.",
-//     number: "04",
-//   },
-//   {
-//     id: 5,
-//     image: "https://fardin-portfolio.netlify.app/assets/project5-CdXc3Wq_.jpg",
-//     title: "Turf Easy UX Case Study",
-//     subtitle: "UX case study covering research, wireframes, and usability.",
-//     number: "05",
-//   },
-// ];
+const projects = [
 
-// function ProjectItem({ project, index, scrollYProgress, total }) {
-//   const start = index / total;
-//   const end = (index + 1) / total;
+    {
+        id: 1,
+        image: "/GYMY-landing-page.jpeg",
+        title: "GYMY Landing Page",
+        subtitle:
+            "From the hero section to the final call to action, every element is designed to motivate users and drive engagement.",
+        number: "01",
+        url: "https://www.behance.net/gallery/248223299/GYMY-Landing-Page"
+    },
+    // {
+    //     id: 1,
+    //     image: "/furniture.jpg",
+    //     title: "Furniture Landing Page",
+    //     subtitle:
+    //         "Minimal furniture website showcasing products elegantly.",
+    //     number: "01",
+    //     url: "https://www.behance.net/gallery/209896509/Furniture-Landing-Page"
+    // },
+    {
+        id: 2,
+        image: "/hotel.jpg",
+        title: "Mati-ta Hotel Landing page",
+        subtitle:
+            "A clean, user-centric hotel landing page that simplifies services and guides guests to book with ease.",
+        number: "02",
+        url: "https://www.behance.net/gallery/209372263/Hotel-Resort-Landing-Page"
+    },
+    {
+        id: 3,
+        image: "/pokkie.jpg",
+        title: "POOKIE App Case Study",
+        subtitle:
+            "A user centric marketplace app for buying and selling cats, combined with an integrated accessories store for a complete pet care experience.",
+        number: "03",
+        url: "https://www.behance.net/gallery/207863975/POOKIE-app-UX-case-study"
+    },
+    {
+        id: 4,
+        image: "/ScaleXO.jpg",
+        title: "ScaleXO SaaS Case Study",
+        subtitle:
+            "ScaleXO helps businesses scale faster with smart digital solutions focused on growth, efficiency and impact.",
+        number: "04",
+        url: "https://www.behance.net/gallery/242943125/ScaleXO-SaaS-Product-Design-Case-Study"
+    },
+];
 
-//   const y = useTransform(scrollYProgress, [start, end], ["100%", "0%"]);
+export default function Projects() {
+    return (
+        <section id="work" className="pt-20 text-white px-4 sm:px-6 lg:px-12 xl:px-16 space-y-32">
+            {projects.map((project, i) => {
+                const isEven = i % 2 === 0;
 
-//   return (
-//     <motion.div
-//       style={{ y }}
-//       className="absolute inset-0 flex flex-col justify-center items-center"
-//     >
-//       {/* Image Wrapper */}
-//       <div className="relative w-[90%] sm:w-[70%] md:w-[520px] lg:w-[1020px] h-[70vh] sm:h-[75vh] md:h-[80vh] rounded-[30px] group">
-//         {/* Gradient Border Layer */}
-//         <div className="absolute inset-0 rounded-[30px] p-[2px] bg-[linear-gradient(1315deg,rgba(221,255,0,1),rgba(221,255,0,0.4),rgba(221,255,0,0.1),rgba(221,255,0,0.1))]">
-//           {/* Inner Content Container */}
-//           <div className="relative h-full w-full rounded-[28px] overflow-hidden bg-black">
-//             {/* Background Image */}
-//             <div
-//               className="absolute inset-0 bg-cover bg-center"
-//               style={{ backgroundImage: `url(${project.image})` }}
-//             />
+                return (
+                    <div
+                        key={project.id}
+                        className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6"
+                    >
+                        {/* Image */}
+                        <motion.div
+                            initial={{ opacity: 0, x: isEven ? -80 : 80 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            className={`relative rounded-3xl overflow-hidden 
+  ${isEven ? "lg:order-1" : "lg:order-2"}
+`}
 
-//             {/* Icon with hover effect */}
-//             <div className="absolute top-4 right-4 z-20 bg-[#0B0B0B] p-2 rounded-xl text-[#DDFF00] overflow-hidden group/icon">
-//               {/* Background slide effect */}
-//               <div className="rounded-xl absolute " />
-//               {/* Icon */}
-//               <ArrowUpRight size={22} className="transform translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 ease-out relative z-10 group-hover:text-white transition-colors duration-500" />
-//             </div>
+                        >
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full h-[420px] object-cover hover:scale-105 transition-transform duration-700"
+                            />
+                        </motion.div>
 
-//             <div className="group-hover:hidden block absolute top-4 right-4 z-20 bg-[#0B0B0B] p-2 rounded-xl text-[#DDFF00] overflow-hidden group/icon">
-//               {/* Background slide effect */}
-//               <div className="rounded-xl absolute " />
-//               {/* Icon */}
-//               <ArrowUpRight size={22} className="" />
-//             </div>
+                        {/* Content */}
+                        <motion.div
+                            initial={{ opacity: 0, x: isEven ? 80 : -80 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                            className={`relative 
+  ${isEven ? "lg:order-2" : "lg:order-1"}
+`}
 
-//             {/* Overlay */}
-//             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/70" />
+                        >
+                            {/* Background Number */}
+                            <div className="absolute -top-20 left-0 text-[120px] font-bold text-white/5 select-none">
+                                {project.number}
+                            </div>
 
-//             {/* Bottom Content */}
-//             <div className="absolute bottom-0 left-0 right-0 bg-[#0B0B0B] py-4 px-4">
-//               <h3 className="text-lg font-medium text-white group-hover:text-[#DDFF00] transition-colors duration-300">
-//                 {project.title}
-//               </h3>
-//               <p className="text-base text-[#B8B8B8]">{project.subtitle}</p>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </motion.div>
+                            <h3 className="text-3xl font-semibold mb-4">
+                                {project.title}
+                            </h3>
+                            <p className="text-lg text-white/70 mb-6 max-w-md">
+                                {project.subtitle}
+                            </p>
 
-//   );
-// }
-
-
-
-// export default function Projects() {
-//   const containerRef = useRef(null);
-//   const { scrollYProgress } = useScroll({
-//     target: containerRef,
-//     offset: ["start start", "end end"],
-//   });
-
-//   return (
-//     <section ref={containerRef} className="relative h-[300vh] w-full">
-//       <div className="sticky top-0 h-screen overflow-hidden flex items-center">
-//         {projects.map((project, i) => (
-//           <ProjectItem
-//             key={project.id}
-//             project={project}
-//             index={i}
-//             total={projects.length}
-//             scrollYProgress={scrollYProgress}
-//           />
-//         ))}
-
-//       </div>
-      
-//     </section>
-//   );
-// }
+                            <button className="flex items-center gap-2 text-[#DDFF00] hover:text-white transition">
+                                <Link className="flex items-center gap-2" href={project.url}>
+                                    View Project <ArrowUpRight size={20} />
+                                </Link>
+                            </button>
+                        </motion.div>
+                    </div>
+                );
+            })}
+            {/* View All Projects Button */}
+            <div className="text-center ">
+                <button className="group relative px-8 py-4 bg-[#DDFF00] text-black font-bold rounded-2xl overflow-hidden
+           transition-all duration-300 hover:shadow-[0_0_10px_rgba(221,255,0,0.5)] hover:scale-105">
+                    <a href="https://www.behance.net/fardinfarabi1" className="relative z-10 flex items-center justify-center gap-2">
+                        View All Projects
+                        <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-300" />
+                    </a>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#DDFF00] to-[#CCEE00] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </button>
+            </div>
+        </section>
+    );
+}

@@ -13,7 +13,7 @@ export default function References() {
       author: "Mohammad Ashraf Ali",
       role: "CEO",
       company: "Bibtbyte Innovations",
-      image: "https://bitbyteinnovations.com/data/team-images/ashraf.jpeg",
+      image: "/ashraf-bhai.jpg",
       color: "from-cyan-500 to-blue-500"
     },
     {
@@ -29,7 +29,7 @@ export default function References() {
       author: "Showrab Paul",
       role: "Front End Developer",
       company: "Bibtbyte Innovations",
-      image: "/showrab.jpg",
+      image: "/showrab-paul-photo.png",
       color: "from-orange-500 to-red-500"
     }
   ];
