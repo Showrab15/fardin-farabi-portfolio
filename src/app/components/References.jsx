@@ -1,8 +1,6 @@
-
-
-"use client"
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+"use client";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function References() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -14,7 +12,7 @@ export default function References() {
       role: "CEO",
       company: "Bibtbyte Innovations",
       image: "/ashraf-bhai.jpg",
-      color: "from-cyan-500 to-blue-500"
+      color: "from-cyan-500 to-blue-500",
     },
     {
       text: "During his time as a Web Developer Intern at ASCII System, Fardin demonstrated strong design thinking and a clear understanding of how design and development work together. His ideas and collaborative mindset added real value to the team.",
@@ -22,7 +20,7 @@ export default function References() {
       role: "CEO",
       company: "ASCII System",
       image: "/sourav.jpg",
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500",
     },
     {
       text: "I'm really happy to have worked with Fardin. He helped translate Figma designs into clean, responsive UI elements and made the development process smoother through clear communication and a friendly teamwork mindset.",
@@ -30,8 +28,8 @@ export default function References() {
       role: "Front End Developer",
       company: "Bibtbyte Innovations",
       image: "/showrab-paul-photo.png",
-      color: "from-orange-500 to-red-500"
-    }
+      color: "from-orange-500 to-red-500",
+    },
   ];
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -55,24 +53,30 @@ export default function References() {
       },
     },
   };
-const scrollToSection = (id) => {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <motion.div id="references" initial="hidden"
+    <motion.div
+      id="references"
+      initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={containerVariants}
-      className="pt-20 px-4 sm:px-6 lg:px-12 xl:px-16">
+      className="pt-20 px-4 sm:px-6 lg:px-12 xl:px-16"
+    >
       {/* Dynamic Background Grid */}
       <div className="absolute inset-0 -z-10 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(rgba(221, 255, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(221, 255, 0, 0.1) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(rgba(221, 255, 0, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(221, 255, 0, 0.1) 1px, transparent 1px)`,
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
       <div className="max-w-7xl mx-auto">
@@ -80,10 +84,10 @@ const scrollToSection = (id) => {
         <div className="">
           <div className="flex items-center gap-4 mb-6">
             <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#DDFF00]" />
-            <span className="text-[#DDFF00] text-sm font-medium tracking-wider uppercase">Testimonials</span>
+            <span className="text-[#DDFF00] text-sm font-medium tracking-wider uppercase">
+              Testimonials
+            </span>
           </div>
-
-
         </div>
 
         {/* Bento Grid Layout */}
@@ -96,7 +100,9 @@ const scrollToSection = (id) => {
           >
             <div className="relative h-full bg-black border border-white/10 rounded-3xl p-8 lg:p-12 overflow-hidden transition-all duration-500 hover:border-[#DDFF00]/50">
               {/* Gradient Orb */}
-              <div className={`absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br ${testimonials[0].color} opacity-20 blur-3xl rounded-full transition-all duration-700 ${hoveredIndex === 0 ? 'scale-150' : 'scale-100'}`} />
+              <div
+                className={`absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br ${testimonials[0].color} opacity-20 blur-3xl rounded-full transition-all duration-700 ${hoveredIndex === 0 ? "scale-150" : "scale-100"}`}
+              />
 
               <div className="relative z-10">
                 {/* Quote Mark */}
@@ -110,13 +116,25 @@ const scrollToSection = (id) => {
 
                 {/* Author Card */}
                 <div className="flex items-center gap-4">
-                  <div className={`relative w-16 h-16 rounded-full overflow-hidden ring-2 ring-transparent group-hover:ring-[#DDFF00]/30 transition-all duration-300`}>
-                    <img src={testimonials[0].image} alt={testimonials[0].author} className="w-full h-full object-center" />
+                  <div
+                    className={`relative w-16 h-16 rounded-full overflow-hidden ring-2 ring-transparent group-hover:ring-[#DDFF00]/30 transition-all duration-300`}
+                  >
+                    <img
+                      src={testimonials[0].image}
+                      alt={testimonials[0].author}
+                      className="w-full h-full object-center"
+                    />
                   </div>
                   <div>
-                    <p className="text-white font-semibold text-lg">{testimonials[0].author}</p>
-                    <p className="text-gray-400 text-sm">{testimonials[0].role}</p>
-                    <p className="text-[#DDFF00] text-xs font-medium">{testimonials[0].company}</p>
+                    <p className="text-white font-semibold text-lg">
+                      {testimonials[0].author}
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      {testimonials[0].role}
+                    </p>
+                    <p className="text-[#DDFF00] text-xs font-medium">
+                      {testimonials[0].company}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -134,17 +152,31 @@ const scrollToSection = (id) => {
               >
                 <div className="relative bg-black border border-white/10 rounded-3xl p-6 lg:p-8 overflow-hidden transition-all duration-500 hover:border-[#DDFF00]/50">
                   {/* Gradient Orb */}
-                  <div className={`absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br ${testimonial.color} opacity-20 blur-3xl rounded-full transition-all duration-700 ${hoveredIndex === index + 1 ? 'scale-150' : 'scale-100'}`} />
+                  <div
+                    className={`absolute -top-10 -right-10 w-40 h-40 bg-gradient-to-br ${testimonial.color} opacity-20 blur-3xl rounded-full transition-all duration-700 ${hoveredIndex === index + 1 ? "scale-150" : "scale-100"}`}
+                  />
 
                   <div className="relative z-10">
                     <div className="flex items-start gap-3 mb-4">
-                      <div className={`relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-transparent group-hover:ring-[#DDFF00]/30 transition-all duration-300`}>
-                        <img src={testimonial.image} alt={testimonial.author} className="w-full h-full object-center" />
+                      <div
+                        className={`relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-transparent group-hover:ring-[#DDFF00]/30 transition-all duration-300`}
+                      >
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.author}
+                          className="w-full h-full object-center"
+                        />
                       </div>
                       <div className="flex-1">
-                        <p className="text-white font-semibold">{testimonial.author}</p>
-                        <p className="text-gray-400 text-xs">{testimonial.role}</p>
-                        <p className="text-[#DDFF00] text-xs font-medium">{testimonial.company}</p>
+                        <p className="text-white font-semibold">
+                          {testimonial.author}
+                        </p>
+                        <p className="text-gray-400 text-xs">
+                          {testimonial.role}
+                        </p>
+                        <p className="text-[#DDFF00] text-xs font-medium">
+                          {testimonial.company}
+                        </p>
                       </div>
                     </div>
 
@@ -192,18 +224,25 @@ const scrollToSection = (id) => {
                   {`Let's`} Create Together
                 </h3>
                 <p className="text-gray-400 mb-8 text-lg">
-                  Ready to bring your vision to life? {`Let's`} discuss your next project.
+                  Ready to bring your vision to life? {`Let's`} discuss your
+                  next project.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="group relative px-4 py-4 bg-[#DDFF00] text-black font-bold rounded-full overflow-hidden transition-all duration-300 hover:scale-105">
-                    <span className="relative z-10 flex items-center justify-center gap-2">
-                      Start a Project
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                    </span>
-                  </button>
-                  <button id="work"          onClick={() => scrollToSection('work')}
-
- className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-full hover:bg-white/5 hover:border-[#DDFF00]/50 transition-all duration-300">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://wa.me/+8801878131404?text=Hi!%20I%E2%80%99m%20interested%20in%20working%20with%20you.%20Let%E2%80%99s%20chat!"
+                    className="group relative bg-[#DDFF00] text-black font-semibold px-8 py-4 rounded-full
+               transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden z-10"
+                  >
+                    <span className="relative z-10">Start a project</span>
+                    {/* THIS was blocking clicks */}
+                  </a>
+                  <button
+                    id="work"
+                    onClick={() => scrollToSection("work")}
+                    className="px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-full hover:bg-white/5 hover:border-[#DDFF00]/50 transition-all duration-300"
+                  >
                     View Work
                   </button>
                 </div>
@@ -214,19 +253,24 @@ const scrollToSection = (id) => {
                 <div className="relative">
                   {/* Floating Elements */}
                   <div className="absolute -top-8 -left-8 w-24 h-24 bg-[#DDFF00]/20 rounded-full blur-2xl animate-pulse" />
-                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }} />
+                  <div
+                    className="absolute -bottom-8 -right-8 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-pulse"
+                    style={{ animationDelay: "1s" }}
+                  />
 
                   {/* Icon Grid */}
                   <div className="relative grid grid-cols-3 gap-4">
-                    {['💼', '🎨', '⚡', '🎯', '✨', '🚀', '💡', '🔥', '⭐'].map((emoji, i) => (
-                      <div
-                        key={i}
-                        className="w-16 h-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-300"
-                        style={{ animationDelay: `${i * 0.1}s` }}
-                      >
-                        {emoji}
-                      </div>
-                    ))}
+                    {["💼", "🎨", "⚡", "🎯", "✨", "🚀", "💡", "🔥", "⭐"].map(
+                      (emoji, i) => (
+                        <div
+                          key={i}
+                          className="w-16 h-16 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl flex items-center justify-center text-2xl hover:scale-110 transition-transform duration-300"
+                          style={{ animationDelay: `${i * 0.1}s` }}
+                        >
+                          {emoji}
+                        </div>
+                      ),
+                    )}
                   </div>
                 </div>
               </div>
